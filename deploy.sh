@@ -8,6 +8,7 @@ git commit -m "$commit_message"
 echo "Enter Remote: "
 read remote
 if [ remote -eq "" ]
+	then
 	remote="master"
 fi
 echo "Enter Branch: "
