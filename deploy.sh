@@ -7,9 +7,10 @@ echo "committing..."
 git commit -m "$commit_message"
 echo "Enter Remote: "
 read remote
-if [ remote -eq "" ]
+if [ "$remote" -eq "" ]
 	then
 	remote="master"
 fi
 echo "Enter Branch: "
 read branch
+git push $remote $branch
