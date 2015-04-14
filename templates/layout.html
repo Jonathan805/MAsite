@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{% block title %}{% endblock %}</title>
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+        
+        <script type="text/javascript"> var room_id = '{{ room_id }}'; </script>
+        
+        <meta property="og:site_name" content="Marine Arena" />
+        
+         
+        {% block head %} {% endblock %}
+    </head>
+    <body>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        {% block body %}
+        {% endblock %}        
+        {% block scripts %}
+        {% endblock %}
+        <footer class="footer">
+            <div class="container">
+                <p class="text-muted">Made by MrPocky</p>
+            </div>
+        </footer>        
+    </body>
+</html>
