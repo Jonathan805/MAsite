@@ -1,8 +1,27 @@
 {% extends "layout.html" %}
-{% block title %}Marine Arena Forums{% endblock %}
+{% block title %}Text got Kappa'd{% endblock %}
 {% block head %} 
 {% endblock %}
 {% block body %}
+<div class="container">
+	<div class="jumbotron">
+		<div class="row">
+			<h1><a href='/'>Monte your text!</a></h1>
+			<p>insert your text below</p>
+			<div class="row">
+				<div class="input-group col-md-12">
+					<input type="text" id="urlText" class="form-control input-lg" placeholder="create a custom audiopod" />
+				</div>
+				<span class="input-group-btn">
+							<button class="btn btn-info btn-lg" id="urlButton" type="submit">
+							Monte
+							</button>
+				</span>
+			</div>
+		</div>
+	</div>
+</div>
 {% endblock %}
 {% block scripts %}
+<script src="{{ url_for('static', filename='monte.js') }}"></script>
 {% endblock %}
