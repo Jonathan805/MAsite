@@ -13,7 +13,7 @@ if [ -z "$remote"  ]
 fi
 echo "Enter Branch: "
 read branch
-if [ -z "$branch"]
+if [ -z "$branch" ]
 	then
 	branch="master"
 fi

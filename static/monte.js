@@ -1,14 +1,13 @@
- $("#urlButton").click(goToRoom);
+ $("#urlButton").click(Kappa);
 
- $('#urlText').bind('keypress', function(e) {
+ $('#normalText').bind('keypress', function(e) {
 	if(e.keyCode==13){
-		goToRoom();
+		Kappa();
 	}
 });
 
-function goToRoom()
+function Kappa()
 {
-	var url = $("#urlText").val() || room_id;
-	url = url.trim().replace(/\s+/g, '-').replace(/[^\w-]/g,'').replace(/-+/g, '-').replace(/^-+/g,'').replace(/-+$/g,'').substr(0, 32) || room_id;
-	document.location.href = "/" + url + "/host";
+	var text = $("#urlText").val();
+
 }

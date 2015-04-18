@@ -7,12 +7,10 @@
         <title>{% block title %}{% endblock %}</title>
         <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    
+        <meta property="og:site_name" content="MonteText" />
         
-        <script type="text/javascript"> var room_id = '{{ room_id }}'; </script>
-        
-        <meta property="og:site_name" content="Marine Arena" />
-        
-         
+         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         {% block head %} {% endblock %}
     </head>
     <body>
