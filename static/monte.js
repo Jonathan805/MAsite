@@ -1,15 +1,19 @@
  $(document).ready(function(){
  	 $("#urlButton").click(Kappa);
-
+	$('#normalText').bind('keypress', function(e) {
+		if(e.keyCode==13){
+			Kappa();
+		}
+	});
 	
  });
  
 
- $('#normalText').bind('keypress', function(e) {
-	if(e.keyCode==13){
-		Kappa();
-	}
-});
+//  $('#normalText').bind('keypress', function(e) {
+// 	if(e.keyCode==13){
+// 		Kappa();
+// 	}
+// });
 var colors = [		"#FF0000",  		//0
 					"#FF4000",  		//1
 					"#FF8000",  		//2
@@ -45,7 +49,7 @@ function Kappa()
 	var endsub = "[/sub]";
 	//for every letter of the input
 	for (var i = 0; i < length; i++){
-		cosole.log("inside forloop");
+		console.log("inside forloop");
 		var colortext = "[color=" + colors[i%17] + "]";
 		var c = text[i];
 		if (text[i+1]== " "){
