@@ -45,6 +45,7 @@ function Kappa()
 	var endsub = "[/sub]";
 	//for every letter of the input
 	for (var i = 0; i < length; i++){
+		cosole.log("inside forloop");
 		var colortext = "[color=" + colors[i%17] + "]";
 		var c = text[i];
 		if (text[i+1]== " "){
@@ -62,9 +63,10 @@ function Kappa()
 		case 3:
 			result = result.concat(supertxt, colortext, c, endcolor, endsuper);
 		break;
+		console.log("result concatenated");
 		}
 	}
-
-	result = result.concat("[size]");
+	console.log(result);
+	result = result.concat("[/size]");
 	$("resultText").val(result);
 }
