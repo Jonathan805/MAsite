@@ -67,10 +67,10 @@ function Kappa()
 		case 3:
 			result = result.concat(supertxt, colortext, c, endcolor, endsuper);
 		break;
-		console.log("result concatenated");
+		console.log("result concatenated " + (i%4));
 		}
 	}
-	console.log(result);
 	result = result.concat("[/size]");
+	console.log(result);	
 	$("resultText").val(result);
 }
