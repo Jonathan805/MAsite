@@ -49,10 +49,23 @@ function Kappa()
 	var sub = "[sub]";
 	var endsub = "[/sub]";
 	var checked = document.getElementById("checkbox1");
+	var capsbox = document.getElementById("checkbox2");
+	var colorbox = document.getElementById("checkbox3");
+
+
+	if (colorbox.checked){
+		endcolor = "";
+
+	}
+
+
 	//for every letter of the input
 	for (var i = 0; i < length; i++){
-		console.log("inside forloop");
-		var colortext = "[color=" + colors[i%17] + "]";
+		
+		var colortext ="";
+		if (!colorbox.checked){
+			colortext = "[color=" + colors[i%17] + "]";
+		}		
 		var c = text[i];
 		if (text[i+1]== " "){
 				i++;
@@ -85,11 +98,12 @@ function Kappa()
 	}
 	result = result.concat("[/size]");
 	console.log(result);	
-	result = result.toUpperCase();
+	if (!capsbox.checked)
+			result = result.toUpperCase();
+	
 	document.getElementById("result").innerHTML = result+" ";
 	
 	$( "#result" ).fadeIn( "slow" );
-	// document.getElementById("Monteimage").innerHTML = "<img src= \"/static/monte.jpg\" class=\".img-responsive monteimage\" >";
-	// $( ".monteimage").hide().appendTo(".jumbotron").fadeIn('slow');
+
 	
 }
