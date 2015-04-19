@@ -55,19 +55,20 @@ function Kappa()
 		if (text[i+1]== " "){
 				i++;
 				c+=" ";
-			}
+		}
 		switch (pos%4){
-		case 0:
-		case 2:
-			result = result.concat(colortext,c, endcolor);
-		break;
-		case 1:
-			result = result.concat(sub, colortext,c, endcolor, endsub);
-		break;
-		case 3:
-			result = result.concat(supertxt, colortext, c, endcolor, endsuper);
-		break;
+			case 0:
+			case 2:
+				result = result.concat(colortext,c, endcolor);
+			break;
+			case 1:
+				result = result.concat(sub, colortext,c, endcolor, endsub);
+			break;
+			case 3:
+				result = result.concat(supertxt, colortext, c, endcolor, endsuper);
+			break;
 		console.log("result concatenated " + (i%4));
+		pos++;
 		}
 	}
 	result = result.concat("[/size]");
