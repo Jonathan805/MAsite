@@ -40,7 +40,7 @@ function Kappa()
 	var length = text.length;
 	
 	//result string
-	var result = "[size=100]";
+	var result = "[size=200]";
 	var pos = 0;
 	var endcolor = "[/color]";
 	var supertxt = "[super]";
