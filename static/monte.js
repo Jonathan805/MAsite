@@ -26,7 +26,8 @@ var colors = [		"#FF0000",  		//0
 					"#FF00FF",  		//13
 					"#FF00BF",  		//14
 					"#FF00BF",  		//15
-					"#FF0080"			//16];
+					"#FF0080"			//16;
+					]
 function Kappa()
 {
 	console.log("inside function");
