@@ -39,7 +39,7 @@ function Kappa()
 	var result = "[size=100]";
 	var pos = 0;
 	var endcolor = "[/color]";
-	var super = "[super]";
+	var supertxt = "[super]";
 	var endsuper = "[/super]";
 	var sub = "[sub]";
 	var endsub = "[/sub]";
@@ -60,7 +60,7 @@ function Kappa()
 			result = result.concat(sub, colortext,c, endcolor, endsub);
 		break;
 		case 3:
-			result = result.concat(super, colortext, c, endcolor, endsuper);
+			result = result.concat(supertxt, colortext, c, endcolor, endsuper);
 		break;
 		}
 	}
