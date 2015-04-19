@@ -59,17 +59,22 @@ function Kappa()
 		console.log(i +" " + pos);
 		switch (pos%4){
 			case 0:
-			case 2:
+			case 2:{
+				pos = pos+1;
 				result = result.concat(colortext,c, endcolor);
-			break;
-			case 1:
+				break;
+		}
+			case 1:{
+				pos = pos+1;
 				result = result.concat(sub, colortext,c, endcolor, endsub);
-			break;
-			case 3:
+				break;
+		}
+			case 3:{
+				pos = pos+1;
 				result = result.concat(supertxt, colortext, c, endcolor, endsuper);
-			break;
+				break;
+		}
 		
-		pos = pos+1;
 		}
 	}
 	result = result.concat("[/size]");
