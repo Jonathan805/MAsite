@@ -3,7 +3,8 @@
 	
 	
  });
- $('#normalText').bind('keypress', function(e) {
+
+ $('#Text').keyup( function(e) {
 		if(e.keyCode==13){
 			Kappa();
 		}
