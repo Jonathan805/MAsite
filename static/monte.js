@@ -89,6 +89,6 @@ function Kappa()
 	
 	$( "#result" ).fadeIn( "slow" );
 	document.getElementById("Monteimage").innerHTML = "<img src= \"/static/monte.jpg\" class=\".img-responsive monteimage\" >";
-	$( ".monteimage").hide().appendTo(".imagecontainer").fadeIn('slow');
+	$( ".monteimage").hide().appendTo(".jumbotron").fadeIn('slow');
 	
 }
