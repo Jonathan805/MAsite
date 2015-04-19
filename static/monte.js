@@ -1,4 +1,9 @@
- $("#urlButton").click(Kappa);
+ $(document).ready(function(){
+ 	 $("#urlButton").click(Kappa);
+
+	});
+ });
+ 
 
  $('#normalText').bind('keypress', function(e) {
 	if(e.keyCode==13){
@@ -24,7 +29,8 @@ var colors = [		"#FF0000",  		//0
 					"#FF0080"			//16];
 function Kappa()
 {
-	//get the inpu
+	console.log("inside function");
+	//get the input
 	var text = $("#urlText").val();
 	var length = text.length;
 	
