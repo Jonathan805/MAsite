@@ -32,7 +32,7 @@ function Kappa()
 {
 	console.log("inside function");
 	//get the input
-	var text = $("#nomraltext").val();
+	var text = $("#nomralText").val();
 	var length = text.length;
 	
 	//result string
