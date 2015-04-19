@@ -72,5 +72,8 @@ function Kappa()
 	}
 	result = result.concat("[/size]");
 	console.log(result);	
-	$("resultText").val(result);
+	document.getElementById("result").innerHTML(result);
+	
+	  $( "#result" ).fadeIn( "slow" );
+	
 }
