@@ -86,6 +86,8 @@ function Kappa()
 	console.log(result);	
 	document.getElementById("result").innerHTML = result+" ";
 	
-	  $( "#result" ).fadeIn( "slow" );
+	$( "#result" ).fadeIn( "slow" );
+	document.getElementById("Monteimage").innerHTML = "<img src= \"/static/monte.jpg\" class=\".img-responsive monteimage\" >";
+	$( ".monteimage").hide().appendTo(".lastlink").fadeIn('slow');
 	
 }
