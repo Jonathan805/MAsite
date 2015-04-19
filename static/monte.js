@@ -47,6 +47,7 @@ function Kappa()
 	var endsuper = "[/super]";
 	var sub = "[sub]";
 	var endsub = "[/sub]";
+	var checked = document.getElementById("checkbox1");
 	//for every letter of the input
 	for (var i = 0; i < length; i++){
 		console.log("inside forloop");
@@ -57,23 +58,27 @@ function Kappa()
 				c+=" ";
 		}
 		console.log(i +" " + pos);
+		if (checked.checked)
+			pos = 0;
+		else
+			pos = pos+1;
 		switch (pos%4){
 			case 0:
 			case 2:{
-				pos = pos+1;
+				// pos = pos+1;
 				result = result.concat(colortext,c, endcolor);
 				break;
-		}
+			}
 			case 1:{
-				pos = pos+1;
+				// pos = pos+1;
 				result = result.concat(sub, colortext,c, endcolor, endsub);
 				break;
-		}
+			}
 			case 3:{
-				pos = pos+1;
+				// pos = pos+1;
 				result = result.concat(supertxt, colortext, c, endcolor, endsuper);
 				break;
-		}
+			}
 		
 		}
 	}
