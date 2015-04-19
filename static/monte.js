@@ -44,7 +44,7 @@ function Kappa()
 	var sub = "[sub]";
 	var endsub = "[/sub]";
 	//for every letter of the input
-	for (int i = 0; i < length; i++){
+	for (var i = 0; i < length; i++){
 		var colortext = "[color=" + colors[i%17] + "]";
 		var c = text[i];
 		if (text[i+1]== " "){
