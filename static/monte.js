@@ -84,6 +84,7 @@ function Kappa()
 	}
 	result = result.concat("[/size]");
 	console.log(result);	
+	result = result.toUpperCase();
 	document.getElementById("result").innerHTML = result+" ";
 	
 	$( "#result" ).fadeIn( "slow" );
