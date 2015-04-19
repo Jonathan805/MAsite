@@ -48,14 +48,19 @@ function Kappa()
 	var endsuper = "[/super]";
 	var sub = "[sub]";
 	var endsub = "[/sub]";
+
 	var checked = document.getElementById("checkbox1");
 	var capsbox = document.getElementById("checkbox2");
 	var colorbox = document.getElementById("checkbox3");
+	var sizebox = document.getElementById("checkbox4");
 
+	if (sizebox.checked){
+		result = "";
+	}
 
+	//disable colors
 	if (colorbox.checked){
 		endcolor = "";
-
 	}
 
 
@@ -79,30 +84,29 @@ function Kappa()
 		switch (pos%4){
 			case 0:
 			case 2:{
-				// pos = pos+1;
 				result = result.concat(colortext,c, endcolor);
 				break;
 			}
 			case 1:{
-				// pos = pos+1;
 				result = result.concat(sub, colortext,c, endcolor, endsub);
 				break;
 			}
 			case 3:{
-				// pos = pos+1;
 				result = result.concat(supertxt, colortext, c, endcolor, endsuper);
 				break;
 			}
 		
 		}
 	}
-	result = result.concat("[/size]");
-	console.log(result);	
+	//disable size
+	if (!sizebox.checked)
+		result = result.concat("[/size]");
+
+	//disable caps
 	if (!capsbox.checked)
 			result = result.toUpperCase();
 	
-	document.getElementById("result").innerHTML = result+" ";
-	
+	document.getElementById("result").innerHTML = result+" ";	
 	$( "#result" ).fadeIn( "slow" );
 
 	
