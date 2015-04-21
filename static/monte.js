@@ -122,8 +122,7 @@ function Kappa()
 	
 	
 	$( "#resulttextarea" ).val(result);
-	document.getElementById("result").innerHTML = result+" ";	
-	$( "#result" ).fadeIn( "slow" );
+	
 
 	
 }
