@@ -39,10 +39,7 @@ function Kappa()
 	//get the input
 	var text = $("#Text").val();
 
-	//disable caps
-	if (!capsbox.checked)
-			text = text.toUpperCase();
-
+	
 	var length = text.length;
 	
 	//result string
@@ -59,6 +56,11 @@ function Kappa()
 	var colorbox = document.getElementById("checkbox3");
 	var sizebox = document.getElementById("checkbox4");
 
+	//disable caps
+	if (!capsbox.checked)
+			text = text.toUpperCase();
+
+	//disable size
 	if (sizebox.checked){
 		result = "";
 	}
