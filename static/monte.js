@@ -114,13 +114,15 @@ function Kappa()
 		
 		}
 	}
-
-	//disable size
-	if (!sizebox.checked && sizewave.checked)
-		result = result.concat("[/size]");
-
 	
+
+	else{
+		//disable size
+		if (!sizebox.checked)
+			result = result.concat("[/size]");
+	}
 	
+	$( "#resulttextarea" ).val(result);
 	document.getElementById("result").innerHTML = result+" ";	
 	$( "#result" ).fadeIn( "slow" );
 
