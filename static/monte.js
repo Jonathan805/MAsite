@@ -55,6 +55,7 @@ function Kappa()
 	var capsbox = document.getElementById("checkbox2");
 	var colorbox = document.getElementById("checkbox3");
 	var sizebox = document.getElementById("checkbox4");
+	var sizewave = document.getElementById("checkbox5");
 
 	//disable caps
 	if (!capsbox.checked)
@@ -70,6 +71,15 @@ function Kappa()
 		endcolor = "";
 	}
 
+	if (sizewave.checked){
+		supertxt = "[size=200]";
+		endsuper = "[/size]";
+		sub = "[size=50]";
+		endsub = "[/size]";
+		result = "";
+	}
+
+
 
 	//for every letter of the input
 	for (var i = 0; i < length; i++){
@@ -83,7 +93,6 @@ function Kappa()
 				i++;
 				c+=" ";
 		}
-		console.log(i +" " + pos);
 		if (checked.checked)
 			pos = 0;
 		else
@@ -106,7 +115,7 @@ function Kappa()
 		}
 	}
 	//disable size
-	if (!sizebox.checked)
+	if (!sizebox.checked || sizewave.checked)
 		result = result.concat("[/size]");
 
 	
