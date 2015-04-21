@@ -114,8 +114,9 @@ function Kappa()
 		
 		}
 	}
+
 	//disable size
-	if (!sizebox.checked || sizewave.checked)
+	if (!sizebox.checked && sizewave.checked)
 		result = result.concat("[/size]");
 
 	
