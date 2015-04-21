@@ -35,9 +35,14 @@ var colors = [		"#FF0000",  		//0
 					]
 function Kappa()
 {
-	console.log("inside function");
+	
 	//get the input
 	var text = $("#Text").val();
+
+	//disable caps
+	if (!capsbox.checked)
+			text = text.toUpperCase();
+
 	var length = text.length;
 	
 	//result string
@@ -102,9 +107,7 @@ function Kappa()
 	if (!sizebox.checked)
 		result = result.concat("[/size]");
 
-	//disable caps
-	if (!capsbox.checked)
-			result = result.toUpperCase();
+	
 	
 	document.getElementById("result").innerHTML = result+" ";	
 	$( "#result" ).fadeIn( "slow" );
