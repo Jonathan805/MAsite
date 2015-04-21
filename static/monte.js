@@ -116,11 +116,10 @@ function Kappa()
 	}
 	
 
-	else{
-		//disable size
-		if (!sizebox.checked)
-			result = result.concat("[/size]");
-	}
+	//disable size
+	if (!sizebox.checked)
+		result = result.concat("[/size]");
+	
 	
 	$( "#resulttextarea" ).val(result);
 	document.getElementById("result").innerHTML = result+" ";	
